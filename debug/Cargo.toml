@@ -11,9 +11,21 @@ proc-macro = true
 [[test]]
 name = "tests"
 path = "tests/progress.rs"
+#path = "tests/01-parse.rs"
+#path = "tests/02-impl-debug.rs"
+#path = "tests/03-custom-format.rs"
+#path = "tests/04-type-parameter.rs"
+#path = "tests/05-phantom-data.rs"
+#path = "tests/06-bound-trouble.rs"
+#path = "tests/07-associated-type.rs"
+#path = "tests/08-escape-hatch.rs"
 
 [dev-dependencies]
 trybuild = { version = "1.0", features = ["diff"] }
 
 [dependencies]
-# TODO
+syn = {version="1.0.57",features=["full","fold","parsing", "derive", "extra-traits"]}
+quote = "1.0.8"
+proc-macro2 = { version = "1.0", features = ["nightly"]}
+utils = { version = "0.1", path = "../utils" }
+
