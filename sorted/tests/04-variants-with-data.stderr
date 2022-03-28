@@ -1,5 +1,37 @@
 error: Dyn should sort before Fmt
-  --> $DIR/04-variants-with-data.rs:19:5
+  --> tests/04-variants-with-data.rs:19:5
    |
 19 |     Dyn(Box<dyn StdError>),
    |     ^^^
+
+warning: unused import: `std::env::VarError`
+ --> tests/04-variants-with-data.rs:7:5
+  |
+7 | use std::env::VarError;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::error::Error as StdError`
+ --> tests/04-variants-with-data.rs:8:5
+  |
+8 | use std::error::Error as StdError;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::fmt`
+ --> tests/04-variants-with-data.rs:9:5
+  |
+9 | use std::fmt;
+  |     ^^^^^^^^
+
+warning: unused import: `std::io`
+  --> tests/04-variants-with-data.rs:10:5
+   |
+10 | use std::io;
+   |     ^^^^^^^
+
+warning: unused import: `std::str::Utf8Error`
+  --> tests/04-variants-with-data.rs:11:5
+   |
+11 | use std::str::Utf8Error;
+   |     ^^^^^^^^^^^^^^^^^^^
